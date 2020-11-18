@@ -1,0 +1,35 @@
+
+body {
+   background-image: url("/banner2.jpg"); 
+}
+
+a {
+    font-size: 14px;
+}
+p {
+    font-size: 14px;;
+}
+.main-container {
+    padding: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 90%;
+    background-color: white;;
+}
+table {
+    font-size: 15px;;
+}
+div {
+    padding: 0px;
+    margin: auto;
+}
+.gpbp {
+    border: 1px solid lightgrey;
+    padding: 20px;
+}
+.row {
+    margin: 0px;
+}
+hr {
+    border-top: 0.25px solid lightgrey;
+}
