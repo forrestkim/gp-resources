@@ -28,13 +28,13 @@
                 </ol>
                 <li><a href="#single-cell">Single Cell Analysis</a></li>
                 <ol>
-                    <li><a href="#gsea">Seurat Suite</a></li>
-                    <li><a href="#mutation">STREAM Suite</a></li>
-                    <li><a href="#mutation">CONOS Suite</a></li>
-                    <li><a href="#mutation">Monocle</a></li>
-                    <li><a href="#mutation">ScanpyUtilities</a></li>
+                    <li><a href="#seurat">Seurat Suite</a></li>
+                    <li><a href="#stream">STREAM Suite</a></li>
+                    <li><a href="#conos">Conos Suite</a></li>
+                    <!-- <li><a href="#mutation">Monocle</a></li> -->
+                    <li><a href="#scanpy">ScanpyUtilities</a></li>
                 </ol>
-                <li><a href="#visual">Visualization Tools</a></li>
+                <li><a href="#visualization">Visualization Tools</a></li>
                 <li><a href="">Contributors</a></li>
                 
             </ol>
@@ -107,7 +107,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th><a href="https://cloud.genepattern.org/gp/module/doc/urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00370:999999999">STAR.Aligner</a></th>
+                        <th><a target="_blank" href="https://cloud.genepattern.org/gp/module/doc/urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00370:999999999">STAR.Aligner</a></th>
                         <td>FASTA/FASTQ</td>
                         <td>SAM/BAM</td>
                         <td></td>
@@ -229,7 +229,7 @@
         <hr>
         <div class="single-cell" id="single-cell">
             <h2>Single Cell Analysis</h2>
-            <h3>Seurat Suite</h3>
+            <h3 id="seurat">Seurat Suite</h3>
             <p>Seurat (<a target="_blank" href="https://satijalab.org/seurat/">https://satijalab.org/seurat/</a>) is an R package designed for QC, analysis, and exploration of single-cell RNA-seq data. Seurat aims to enable users to identify and interpret sources of heterogeneity from single-cell transcriptomic measurements, and to integrate diverse types of single-.cell data.
             <br><br>
             <a target="_blank" href="https://www.nature.com/articles/nbt.4096">Butler <i>et al.</i>, Nature Biotechnology 2018</a>
@@ -280,7 +280,7 @@
                 </tbody>
             </table>
 
-            <h3>STREAM Suite</h3>
+            <h3 id="stream">STREAM Suite</h3>
             <p>STREAM (Single-cell Trajectories Reconstruction, Exploration And Mapping) (<a target="_blank" href="https://github.com/pinellolab/STREAM">https://github.com/pinellolab/STREAM</a>) is an interactive pipeline capable of disentangling and visualizing complex branching trajectories from both single-cell transcriptomic and epigenomic data. Within GenePattern STREAM is implemented as a collection of modules that cover the entire STREAM processing pipeline to allow individual steps to be performed interactively for data exploration.</p>
             <a target="_blank" href="https://www.nature.com/articles/s41467-019-09670-4">Chen <i>et al.</i> 2019</a>
             <div style="text-align: center;" class="row">
@@ -297,12 +297,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.Preprocess/">STREAM.Preprocess</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.Preprocess/">STREAM.Preprocess</a></th>
                         <td><b>STREAM.Preprocess</b> will prepare single cell RNA-seq data for the STREAM trajectory analysis. It will normalize, log transform, filter and remove mitochondiral genes.</td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.Preprocess/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.FeatureSelection/">STREAM.FeatureSelection</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.FeatureSelection/">STREAM.FeatureSelection</a></th>
                         <td><b>STREAM.FeatureSelection</b> is used to identify features to be used in the downstream analysis. Two types of features can be used;
                         <ol>
                             <li>Variable genes</li>
@@ -312,50 +312,83 @@
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.FeatureSelection/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.DimensionReduction/">STREAM.DimensionReduction</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.DimensionReduction/">STREAM.DimensionReduction</a></th>
                         <td><b>STREAM.DimensionReduction</b> is used to reduce the dimensionality of the dataset to be used in the downstream analysis.</td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.DimensionReduction/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.Plot2DVisualization/">STREAM.Plot2DVisualization</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.Plot2DVisualization/">STREAM.Plot2DVisualization</a></th>
                         <td><b>STREAM.Plolt2DVisualization</b> is used check if there is clear meaningful trajectory pattern to the data. If there is, we will continue the downstream analysis placing the cells onto the trajectories. If not, we would go back to previous steps to modify the parameters used to filter and prepare the data to try different settings.</td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.Plot2DVisualization/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.SeedEPGStructure/">STREAM.SeedEPGStructure</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.SeedEPGStructure/">STREAM.SeedEPGStructure</a></th>
                         <td><b>STREAM.SeedEPGStructure</b> is use to seed the initial elastic principal graph prior to starting the trajectory learning process. </td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.SeedEPGStructure/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.ElasticPrincipalGraph/">STREAM.ElasticPrincipalGraph</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.ElasticPrincipalGraph/">STREAM.ElasticPrincipalGraph</a></th>
                         <td><b>STREAM.ElasticPrincipalGraph</b> uses elastic principal graph learning to calculate a pseudotime trajectory. </td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.ElasticPrincipalGraph/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.EPGAdjustFinalGraph/">STREAM.EPGAdjustFinalGraph</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.EPGAdjustFinalGraph/">STREAM.EPGAdjustFinalGraph</a></th>
                         <td><b>STREAM.EPGAdjustFinalGraph</b> facilitates some final adjustments to the graph generated by <b>STREAM.ElasticPrincipalGraph</b> such as optimizing the structure, pruning the final structure or extending leaf nodes. </td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.EPGAdjustFinalGraph/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.VisualizeTrajectories/">STREAM.VisualizeTrajectories</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.VisualizeTrajectories/">STREAM.VisualizeTrajectories</a></th>
                         <td><b>STREAM.VisualizeTrajectories</b> is used to generate the subway and stream plots for a computed graph structure. </td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.VisualizeTrajectories/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.DetectDifferentiallyExpressedGenes/">STREAM.DetectDifferentiallyExpressedGenes</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.DetectDifferentiallyExpressedGenes/">STREAM.DetectDifferentiallyExpressedGenes</a></th>
                         <td><b>STREAM.DetectDifferentiallyExpressedGenes</b> used to detect differentially expressed genes between pairs of branches.</td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.DetectDifferentiallyExpressedGenes/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.DetectLeafGenes/">STREAM.DetectLeafGenes</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.DetectLeafGenes/">STREAM.DetectLeafGenes</a></th>
                         <td><b>STREAM.DetectLeafGenes</b> is used to detect marker genes for each leaf branch. </td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.DetectLeafGenes/"><i class="fa fa-book"></i></a></td>
                     </tr>
                     <tr>
-                        <th><a href="https://genepattern.github.io/STREAM.DetectTransitionGenes/">STREAM.DetectTransitionGenes</a></th>
+                        <th><a target="_blank" href="https://genepattern.github.io/STREAM.DetectTransitionGenes/">STREAM.DetectTransitionGenes</a></th>
                         <td><b>STREAM.DetectTransitionGenes</b> is used to detect marker genes for each transition. </td>
                         <td style="text-align: center;"><a target="_blank" href="https://genepattern.github.io/STREAM.DetectTransitionGenes/"><i class="fa fa-book"></i></a></td>
                     </tr>
+                </tbody>
+            </table>
+            <h3 id="conos">CONOS Suite</h3>
+            <p>Conos is a package to wire together large collections of single-cell RNA-seq datasets, which allows for both the identification of recurrent cell clusters and the propagation of information between datasets in multi-sample or atlas-scale collections. It focuses on the uniform mapping of homologous cell types across heterogeneous sample collections. For instance, users could investigate a collection of dozens of peripheral blood samples from cancer patients combined with dozens of controls, which perhaps includes samples of a related tissue such as lymph nodes.
+            <br>
+            <br>
+            <a target="_blank" href="https://github.com/kharchenkolab/conos#citation">Github</a><br>
+            <a target="_blank" href="https://www.nature.com/articles/s41592-019-0466-z">Barkas <i>et al.</i> 2019</a>
+            <br><br>
+            This module will read single cell data (e.g., count files) from different datasets and project each of those datasets into their own PCA space.
+            </p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Description</th>
+                        <th>Documentation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><a target="_blank" href="https://github.com/genepattern/Conos.Preprocess/blob/master/documentation.md">Conos.Preprocess</a></th>
+                        <td>Performs independent clustering of each of the single-cell quantification tables using the Pagoda2 method. These clustered results are then projected into C/PCA space and embedded into a joint graph.
+                        </td>
+                        <td style="text-align: center;"><a target="_blank" href="https://github.com/genepattern/Conos.Preprocess/blob/master/documentation.md"><i class="fa fa-book"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th><a target="_blank" href="https://github.com/genepattern/Conos.Cluster/blob/master/documentation.md">Conos.Cluster</a></th>
+                        <td>Clustering is performed on the joint graph produced as the output of <b>Conos.Preprocess</b> using both Leiden community clustering and Walktrap clustering. The clustered joint graph is then projected into UMAP space for visualiztion.
+                        </td>
+                        <td style="text-align: center;"><a target="_blank" href="https://github.com/genepattern/Conos.Cluster/blob/master/documentation.md"><i class="fa fa-book"></i></a></td>
+                    </tr>
+
                 </tbody>
             </table>
             <div class="alert alert-danger">left out monocle for now</div>
@@ -377,7 +410,7 @@
                 </tbody>
             </table> -->
 
-            <h3>ScanpyUtilities</h3>
+            <h3 id="scanpy">ScanpyUtilities</h3>
             <p>
                 <a target="_blank" href="https://scanpy.readthedocs.io/en/stable/">Scanpy</a> is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, pseudotime and trajectory inference and differential expression testing. The Python-based implementation efficiently deals with datasets of more than one million cells.
                 <br><br>
@@ -540,6 +573,15 @@
             </ul>
         </div>
     -->
+    <div class="visualiztion" id="visualization">
+        <h2>Visualization Tools (work in progress)</h2>
+        <ul>
+            <li>igv.js</li>
+            <li>CytoscapeViewer</li>
+            <li>HeatMapViewer</li>
+            <li>HierarchicalClusteringViewer</li>
+        </ul>
+    </div>
     <h4>Contributions</h4>
         <p></p>
 
