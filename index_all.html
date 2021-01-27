@@ -1,0 +1,463 @@
+<html lang="en">
+<head>
+    <title>Single Cell GenePattern Resources</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" target="_blank" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" target="_blank" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- Style -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>Single Cell GenePattern Resources</h1>
+            <hr>
+        </div>
+        <div class="toc">
+            <h4>Table of Contents</h4>
+            <ol>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#importing-data">Available Tools</a></li>
+                <ol>
+                    <li><a href="#importing-data">Importing Data</a></li>
+                    <li><a href="#gene-expression">Gene Expression Analysis</a></li>
+                    <li><a href="#single-cell">Single-cell Sequencing</a></li>
+                    <li><a href="#gsea">GSEA</a></li>
+                    <li><a href="#mutation">Mutational Significance Analysis</a></li>
+                    <li><a href="#proteomics">Proteomics</a></li>
+                    <li><a href="#pathway">Pathway Analysis</a></li>
+                    <li><a href="#epigenetics">Epigenetics</a></li>
+                    <li><a href="#snp">SNP and Copy Number Analysis</a></li>
+                    <li><a href="#visual">Visualization Tools</a></li>
+                </ol>
+                <li><a href="">Contributors</a></li>
+            </ol>
+        </div>
+        <div class="get-started" id="get-started">
+            <h2>Get Started</h2>
+            <br>
+            <h4>What is GenePattern?</h4>
+            <div style="text-align:center;">
+                <img src="placeholder.png" style="width:50%;"> 
+                </div>
+            <br>
+            <p>GenePattern is a freely available open-source scientific workflow system that is designed for computational biology. It provides access to a repository of hundreds of bioinformatics analysis and visualization methods (“modules”), as well as utilities for data formatting, preprocessing, and other auxiliary functions that provide important glue between analysis steps. The user interface is point and click with no programming required. The public GenePattern server, hosted since 2008, has tens of thousands of registered users and runs thousands of analysis jobs per week. The software has been downloaded for local installation by bioinformatics core facilities, research laboratories, and individual scientists worldwide.
+
+            </p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tutorial</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><a target="_blank" href="https://www.genepattern.org/quick-start">GenePattern Quickstart</a></th>
+                        <td>This brief tutorial introduces you to GenePattern by providing step-by-step instructions for running an analysis and viewing the results. In less than 10 minutes you'll run your first analysis and review the results.</td>
+                    </tr>
+                    <tr>
+                        <th><a target="_blank" href="https://www.genepattern.org/tutorial">Differential Expression Tutorial</a></th>
+                        <td>The GenePattern Tutorial introduces you to GenePattern by providing step-by-step instructions for analyzing gene expression. It takes approximately 40 minutes to complete.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><a target="_blank" href="https://www.genepattern.org/concepts">Concepts</a></th>
+                        <td>This Concepts guide provides a brief introduction to GenePattern. All other GenePattern documentation assumes that you are familiar with the concepts covered here.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>What is GenePattern Notebook</h4>
+            <div style="text-align:center;">
+            <img src="placeholder.png" style="width:50%;"> 
+            </div>
+            <br>
+            <p>GenePattern Notebook extends the popular Jupyter Notebook system with GenePattern’s point-and-click user interface for accessing and executing analyses on local or remote GenePattern servers. The Workspace is an online resource where investigators can share executable notebooks privately or publicly, run their analyses, or reproduce the work of others. The freely-available public GenePattern server has over 68,000 registered users, runs thousands of analyses per week, and users have cloned, modified, or authored over 11,000 notebooks in the GP-Workspace.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tutorial</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><a target="_blank" href="https://notebooks.genepattern.org/services/sharing/notebooks/361/preview/">GenePattern Notebook Tutorial</a></th>
+                        <td>A tutorial on how to use the basic features of the GenePattern Notebook environment.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><a target="_blank" href="https://notebooks.genepattern.org/services/sharing/notebooks/294/preview/">UI Builder Tutorial</a></th>
+                        <td>A tutorial of how to use the UI Builder, aimed at notebook authors with programmatic skill.</td>
+                    </tr>
+                    <tr>
+                        <th><a target="_blank" href="https://notebooks.genepattern.org/services/sharing/notebooks/27/preview/">Run an Analysis</a></th>
+                        <td>A simple example of how to run an analysis in GenePattern Notebook, in which you preprocess gene expression data and use a heat map to visualize the results.</td>
+                    </tr>
+                    <tr>
+                        <th><a target="_blank" href="https://notebooks.genepattern.org/services/sharing/notebooks/19/preview/">GenePattern Python Tutorial</a></th>
+                        <td>A tutorial on how to programmatically call GenePattern services from Python.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+        </div>
+
+        <div class="importing-data" id="importing-data">
+            <h2>Importing Data</h2>
+            <p>GenePattern provides several data manangement tools that provide access to popular genomic databases and storage services.
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tool Name</th>
+                        <th>Tutorials</th>
+                        <th>Notebook</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><a href="">TCGA Importer</a></th>
+                        <td><a target="_blank" href="https://github.com/genepattern/TCGAImporter/blob/master/how_to_download_a_manifest_and_metadata.pdf" target="_blank">How to download a manifest and metadata <i class="fas fa-file-pdf"></i></a></td>
+                        <td><a target="_blank" href="https://notebooks.genepattern.org/services/sharing/notebooks/200/preview/" target="_blank">Bladder Urothelial Carcinoma (BLCA)</a></td>
+                        <td>This module imports data from TCGA by taking in a GDC manifest file, downloading the files listed on that manifest, renaming them to be human-friendly, and compiling them into a GCT file to be computer-friendly. <a target="_blank" href="https://www.genepattern.org/modules/docs/TCGAImporter/6">Documentation</a></td>
+                    </tr>
+                    <tr>
+                        <th><a href="">GEO Importer</a></th>
+                        <td></td>
+                        <td></td>
+                        <td> Imports data from the Gene Expression Omnibus (GEO) <a href="http://modreposdoc.genepattern.org:8765/prod/GEOImporter/broad.mit.edu:cancer.software.genepattern.module.analysis/00042/5/GEOImporter.pdf" target="_blank" rel="noopener noreferrer">Documentation</a></td>
+                    </tr>
+                    <tr>
+                        <th><a href="">Globus Client?</a></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="gene-expression" id="gene-expression">
+            <h2>Gene Expression Analysis</h2>
+            <p>GenePattern offers a set of tools to support a wide variety of RNA-seq analyses, including short-read mapping, identification of splice junctions, transcript and isoform detection, quantitation, differential expression, quality control metrics, visualization, and file utilities.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Module</th>
+                        <th>Input</th>
+                        <th>Normalization</th>
+                        <th>Batch / Confounder Removal</th>
+                        <th>Clustering</th>
+                        <th>Test Statistic</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><a href="">ComparativeMarkerSelection</a></th>
+                        <td><a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#GCT">GCT</a> or <a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#RES">RES</a></td>
+                        <td></td>
+                        <td><a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#CLS">CLS</a></td>
+                        <td></td>
+                        <td>t-test; signal-to-noise; paired t-test</td>
+                        <td>Identify differentially expressed genes that can discriminate between distinct classes of samples. <a target="_blank" href="https://www.genepattern.org/modules/docs/ComparativeMarkerSelection/10">Documentation</a>; <a target="_blank" href="https://github.com/genepattern/ComparativeMarkerSelection">Github <i class="fab fa-github"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th><a href="">DESeq2</a></th>
+                        <td><a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#GCT">GCT</a></td>
+                        <td>DESeq2</td>
+                        <td></td>
+                        <td>Yes</td>
+                        <td>Wald test</td>
+                        <td>A Differential Expression workflow for RNA-Seq data based on the DESeq2 package from Bioconductor. <a target="_blank" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8">Love <i>et al.</i> 2014</a>; <a target="_blank" href="https://genepattern.github.io/DESeq2/v1/index.html">Documentation</a>; <a target="_blank" href="https://github.com/genepattern/DESeq2">Github <i class="fab fa-github"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><a href="">HierarchicalClustering</a></th>
+                        <td><a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#GCT">GCT</a> or <a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#RES">RES</a></td>
+                        <td>log base 2 transform; row center; row normalize; column center; column normalize</td>
+                        <td></td>
+                        <td>Pairwise complete-linkage; Pairwise single-linkage; Pairwise centroid-linkage; Pairwise average-linkage</td>
+                        <td>
+                            No row clustering (default); Uncentered correlation; Pearson correlation; Uncentered correlation, absolute value; Pearson correlation, absolute value; Spearman’s rank correlation; Kendall’s tau; Euclidean distance; City-block distance
+                        </td>
+                        <td>Agglomerative hierarchical clustering of genes/experiments ; <a target="_blank" href="https://www.genepattern.org/modules/docs/HierarchicalClustering/6">Documentation</a>; <a target="_blank" href="https://github.com/genepattern/DESeq2">Github <i class="fab fa-github"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>KMeansClustering</th>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>ConsensusClustering</th>
+                    </tr>
+                    <tr>
+                        <th><a href="">Cuffdiff</a></th>
+                        <td><a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#SAM">SAM</a> or <a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#BAM">BAM</a>; and <a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#GTF">GTF</a></td>
+                        <td>geometric; quartile; classic-fpkm</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Finds significant changes in transcript expression, splicing, and promoter use. <a target="_blank" href="http://www.nature.com/nbt/journal/v31/n1/full/nbt.2450.html">Trapnell <i>et al.</i> 2013</a>; <a target="_blank" href="https://www.genepattern.org/modules/docs/Cuffdiff/7">Documentation</a></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><a href="">Cufflinks</a></th>
+                        <td><a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#SAM">SAM</a> or <a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#BAM">BAM</a>; and <a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#GTF">GTF</a></td>
+                        <td>geometric; quartile; classic-fpkm</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Assembles transcripts, estimates abundances, and tests for differential expression and regulation in RNA-seq samples. <a target="_blank" href="http://www.nature.com/nbt/journal/v31/n1/full/nbt.2450.html">Trapnell <i>et al.</i> 2013</a>; <a target="_blank" href="https://www.genepattern.org/modules/docs/Cufflinks/7">Documentation</a></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><a href="">ExpressionFileCreator</a></th>
+                        <td><a target="_blank" href="https://www.genepattern.org/cancer/software/genepattern/file-formats-guide#CEL">CEL</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td> Creates a RES or GCT file from a set of Affymetrix CEL files. For IVT arrays only; use AffySTExpressionFileCreator for ST arrays. <a target="_blank" href="https://www.genepattern.org/modules/docs/ExpressionFileCreator/13">Documentation</a></a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>NMFConsensus</th>
+                    </tr>
+                    <tr>
+                        <th>Bowtie</th>
+                    </tr>
+                    <tr>
+                        <th>FastQC</th>
+                    </tr>
+                    <tr>
+                        <th>Kallisto</th>
+                    </tr>
+                    <tr>
+                        <th>TopHat</th>
+                    </tr>
+                    <tr>
+                        <th>STAR</th>
+                    </tr>
+                    <tr>
+                        <th>DiSCoVER</th>
+                    </tr>
+                    <tr>
+                        <th>Scripture</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="single-cell" id="single-cell">
+            <h2>Single-cell Sequencing</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Module</th>
+                        <th>Input</th>
+                        <th>Normalization</th>
+                        <th>Batch / Confounder Removal</th>
+                        <th>Clustering</th>
+                        <th>Classification / Marker	</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><a href="">SeuratClustering</a></th>
+                        <td><a href="">RDS</a></td>
+                        <td>log-normal; sctransform </td>
+                        <td>SNNAnchor (mutual nearest neighbors)</td>
+                        <td>Shared nearest neighbors</td>
+                        <td>Yes</td>
+                        <td><a target="_blank" href="https://notebook.genepattern.org/services/sharing/notebooks/376/preview/">Seurat notebook <i class="fas fa-file-alt"></i></a>. Performs clustering and marker identification on single cell data. <a target="_blank" href="https://www.nature.com/articles/nbt.4096">Butler <i>et al.</i> 2018</a>; <a target="_blank" href="https://genepattern.github.io/SeuratClustering/">Documentation</a>; <a target="_blank" href="https://github.com/genepattern/SeuratClustering">Github <i class="fab fa-github"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th><a href="">CONOS (Preprocess, Cluster)</a></th>
+                        <td>text files with tab-separated gene expression matrices (rows are genes, columns are unique cells)</td>
+                        <td>variance normalization</td>
+                        <td>Yes</td>
+                        <td>Pagoda 2; Leiden community clustering; Walktrap clustering</td>
+                        <td>No</td>
+                        <td><a target="_blank" href="">CONOS notebook <i class="fas fa-file-alt"></i></a> . Clustering on Networks of Samples for Single Cell RNA-sequencing <a target="_blank" href="https://doi.org/10.1038/s41592-019-0466-z">Barkas <i>et al.</i> 2019</a>; <a target="_blank" href="">Documentation</a>; <a target="_blank" href="https://github.com/kharchenkolab/conos">Github <i class="fab fa-github"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th><a href="">ScanpyUtilities</a></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- <tr>
+                        <th><a href="">Amaretto</a></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr> -->
+                    <tr>
+                        <th><a href="">STREAM</a></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="gsea" id="gsea">
+            <h2>Gene Set Enrichment Analysis (GSEA)</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Module</th>
+                        <th>Input</th>
+                        <th>Sample Normalization</th>
+                        <th>Reduces Dimensionality</th>
+                        <th>RNA-seq?</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><a href="">GSEA (classic)</a></th>
+                        <td>GCT or RES</td>
+                        <td>meandiv; none</td>
+                        <td></td>
+                        <td>not recommended</td>
+                        <td><a href="https://notebook.genepattern.org/services/sharing/notebooks/370/preview/">GSEA Notebook <i class="fas fa-file-alt"></i></a> Gene Set Enrichment Analysis for the GenePattern platform. <a target="_blank" href="https://gsea-msigdb.github.io/gsea-gpmodule/v20/index.html">Documentation</a>; <a target="_blank" href="">Github <i class="fab fa-github"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th><a href="">ssGSEA</a></th>
+                        <td>GCT (minimum of two samples)</td>
+                        <td>none; rank; log rank; log</td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><a href="https://notebook.genepattern.org/services/sharing/notebooks/386/preview/">ssGSEA Notebook <i class="fas fa-file-alt"></i></a>. Performs single sample GSEA on the GenePattern platform. <a target="_blank" href="https://gsea-msigdb.github.io/ssGSEA-gpmodule/v10/index.html">Documentation</a>; <a target="_blank" href="">Github <i class="fab fa-github"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th><a href="">GSEAPreranked</a></th>
+                        <td><a href="http://www.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#RNK:_Ranked_list_file_format_.28.2A.rnk.29">RNK</a> = ranked list of genes</td>
+                        <td>meandiv; none</td>
+                        <td></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td>Runs the gene set enrichment analysis against a user-supplied ranked list of genes. <a target="_blank" href="https://gsea-msigdb.github.io/gseapreranked-gpmodule/v7/index.html">Documentation</a>; <a target="_blank" href="">Github <i class="fab fa-github"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th><a href="">ConstellationMap</a></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mutation" id="mutation">
+            <h2>Mutational Significance Analysis</h2>
+            <ul>
+                <li>MutPanning</li>
+                <li>MutSigCV</li>
+            </ul>
+        </div>
+        <div class="proteomics" id="proteomics">
+            <h2>Proteomics</h2>
+            <ul>
+                <li>DAPPLE</li>
+                <li>ProteomicsAnalysis</li>
+                <li>PTM_SEA</li>
+                <li>AuDIT</li>
+                <li>Peaks</li>
+                <li>ProteoArray</li>
+            </ul>
+        </div>
+        <div class="pathway" id="pathway">
+            <h2>Pathway Analysis</h2>
+            <ul>
+                <li>ARACNE</li>
+                <li>MINDY</li>
+            </ul>
+        </div>
+        <div class="epigenetics" id="epigenetics">
+            <h2>Epigenetics</h2>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="snp" id="snp">
+            <h2>SNP and Copy Number Analysis</h2>
+            <p>High-density single nucleotide polymorphism (SNP) arrays allow for the analysis of SNPs, copy number alterations (amplifications and deletions), and loss of heterozygosity (LOH) detection. GenePattern provides the following support for the analysis of SNP microarray data:
+
+            <li>Scaling of the data to normalize intensity levels across microarray chips.</li>
+            <li>Probe-level modeling to determine an intensity value for each SNP based on the intensity levels of the probes in each probe set.</li>
+            <li>Copy number (CN) calculation to determine the copy number of a target SNP. The calculation, which divides the intensity value of the target SNP by the intensity value of the normal SNP, is also called CN normalization or normalization with respect to normals.</li>
+            <li>Smoothing based on the R package GLAD (Gain and Loss Analysis of DNA), which detects the altered regions in the genomic pattern and assigns a status (normal, gained or lost) to each chromosomal region.</li>
+            <li>Additional analyses to support detection and visualization of LOH and CN alterations.</li>
+            </p>
+            <ul>
+                <li>GISTIC_2.0</li>
+                <li>CBS</li>
+                <li>HAPSEG</li>
+                <li>CNToXCN</li>
+                <li>CopyNumberDivideByNormals</li>
+                <li>LOHPaired</li>
+                <li>SNPFileCreator</li>
+                <li>SNPFileSorter</li>
+                <li>SNPMultipleSampleAnalysis</li>
+                <li>XChromosomeCorrect</li>
+            </ul>
+        </div>
+        <div class="visual" id="visual">
+            <h2>Visualization Tools</h2>
+            <ul>
+                <li>igv.js</li>
+                <li>CytoscapeViewer</li>
+                <li>HeatMapViewer</li>
+                <li>HierarchicalClusteringViewer</li>
+            </ul>
+        </div>
+
+    <br>
+    <hr>
+    <h4>Our Team</h4>
+        <p></p>
+
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td>Jill P. Mesirov - Principal Investigator</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Barbara Hill</td>
+                    <td>Michael Reich</td>
+                </tr>
+                <tr>
+                    <td>Ted Liefeld</td>
+                    <td>Thorin Tabor</td>
+                </tr>
+                <tr>
+                    <td>Edwin Juarez</td>
+                    <td>Helga Thorvaldsdóttir</td>
+                </tr>
+                <tr>
+                    <td>Forrest Kim</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
